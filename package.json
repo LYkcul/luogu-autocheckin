@@ -1,0 +1,7 @@
+{
+  "name": "luogu-autocheckin",
+  "version": "1.0.0",
+  "description": "Support automatic check-in for Luogu",
+  "main": "index.js",
+  "license": "MIT"
+}

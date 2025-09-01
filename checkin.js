@@ -96,17 +96,20 @@ async function postBenben(csrf, content) {
   try {
     const csrf = await getCsrf();
     await checkin(csrf);
-    const h = await hitokoto();
+    // const h = await hitokoto();
     const p = await jinrishici();
-    if (h.trim().length > 0) {
-      console.log('use hitokoto.');
-      console.log(h);
-      await postBenben(csrf, h);
-    } else if (p.trim().length > 0) {
-      console.log('use jinrishici.');
-      console.log(p);
-      await postBenben(csrf, p);
-    }
+    console.log('use jinrishici.');
+    console.log(p);
+    await postBenben(csrf, p);
+    // if (h.trim().length > 0) {
+    //   console.log('use hitokoto.');
+    //   console.log(h);
+    //   await postBenben(csrf, h);
+    // } else if (p.trim().length > 0) {
+    //   console.log('use jinrishici.');
+    //   console.log(p);
+    //   await postBenben(csrf, p);
+    // }
     console.log('done.');
   } catch (e) {
     console.error(e.message || e);
